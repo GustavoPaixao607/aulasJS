@@ -1,0 +1,150 @@
+:root {
+  --azul-escuro: #1b4f9c;
+  --azul: #1f78d6;
+  --azul-hover: #1a66b8;
+  --texto: #14254a;
+  --texto-suave: #8a94a8;
+  --borda: #d5dcea;
+  --fundo: #eef1f6;
+  --espaco: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #dfe5ef;
+}
+
+
+body {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 0 0 26px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(20, 37, 74, 0.15);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  color: var(--texto);
+}
+
+
+br {
+  display: none;
+}
+
+
+h2 {
+  margin: 0;
+  padding: 22px var(--espaco);
+  background: var(--azul-escuro);
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+
+h5 {
+  margin: 24px var(--espaco) 22px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+label {
+  display: block;
+  margin: 0 var(--espaco) 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+input {
+  display: block;
+  width: calc(100% - 2 * var(--espaco));
+  margin: 0 var(--espaco);
+  padding: 14px 16px;
+  font: inherit;
+  color: var(--texto);
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(31, 120, 214, 0.2);
+}
+
+
+button {
+  display: block;
+  width: calc(100% - 2 * var(--espaco));
+  margin: 14px var(--espaco) 0;
+  padding: 14px;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--azul);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--azul-hover);
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(31, 120, 214, 0.4);
+  outline-offset: 2px;
+}
+
+h4 {
+  margin: 24px var(--espaco) 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+#Faixa {
+  margin: 0 var(--espaco);
+  padding: 30px 16px;
+  background: var(--fundo);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+
+#Faixa:empty::before {
+  content: "Resultado aparecerá aqui";
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--texto);
+}
+
+@media (max-width: 460px) {
+  body {
+    margin: 16px;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+}
