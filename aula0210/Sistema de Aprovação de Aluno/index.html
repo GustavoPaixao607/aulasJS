@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Resultado do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="cabecalho">
+            <div class="icone">🎓</div>
+            <div>
+                <h1>Sistema de Resultado do Aluno</h1>
+                <p>Informe os dados do aluno para verificar se foi aprovado ou reprovado.</p>
+            </div>
+        </header>
+
+        <section class="formulario">
+            <div class="campo">
+                <label for="nome">Nome do aluno:</label>
+                <input type="text" id="nome" placeholder="Ex.: Maria Silva">
+            </div>
+
+            <div class="campo">
+                <label for="nota">Nota (0 a 10):</label>
+                <input type="number" id="nota" min="0" max="10" step="0.1" placeholder="Ex.: 8,5">
+            </div>
+        </section>
+
+        <button id="btnVerificar">🔎 &nbsp; Verificar Resultado</button>
+
+        <section class="resultado" id="resultado">
+            <h2>Resultado:</h2>
+            <p>Preencha os <u>dados</u> e clique em "Verificar Resultado".</p>
+        </section>
+
+        <hr>
+
+        <section class="regra">
+            <div class="info">i</div>
+            <div>
+                <h3>Regra de aprovação</h3>
+                <p>• Média mínima para aprovação: <strong>7,0</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
