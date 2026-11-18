@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef5fc;
+    color: #1d3b64;
+    min-height: 100vh;
+    padding: 42px;
+}
+
+.container {
+    max-width: 1390px;
+    margin: auto;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(31, 83, 135, 0.12);
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #2468b8, #1768c5);
+    color: white;
+    padding: 38px 68px;
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.icone {
+    font-size: 78px;
+}
+
+.cabecalho h1 {
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+
+.cabecalho p {
+    font-size: 27px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 52px 68px 32px;
+}
+
+.campo label {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 20px 22px;
+    border: 2px solid #cbd9e8;
+    border-radius: 12px;
+    font-size: 24px;
+    color: #29486c;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #2476cf;
+    box-shadow: 0 0 0 3px rgba(36, 118, 207, 0.12);
+}
+
+.campo input::placeholder {
+    color: #91a5bd;
+}
+
+#btnVerificar {
+    width: calc(100% - 136px);
+    margin: 0 68px;
+    padding: 22px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #267bcf, #1972ca);
+    color: white;
+    font-size: 29px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btnVerificar:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.resultado {
+    margin: 34px 68px;
+    padding: 40px;
+    min-height: 145px;
+    background: #edf5fe;
+    border-radius: 14px;
+}
+
+.resultado h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    font-size: 27px;
+    color: #4e6f9d;
+}
+
+.resultado.aprovado {
+    background: #e9f8ed;
+    border-left: 7px solid #28a745;
+}
+
+.resultado.aprovado h2,
+.resultado.aprovado p {
+    color: #187532;
+}
+
+.resultado.reprovado {
+    background: #fff0f0;
+    border-left: 7px solid #dc3545;
+}
+
+.resultado.reprovado h2,
+.resultado.reprovado p {
+    color: #a5222d;
+}
+
+.resultado.erro {
+    background: #fff7df;
+    border-left: 7px solid #f0ad00;
+}
+
+.resultado.erro h2,
+.resultado.erro p {
+    color: #8a6200;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #dce8f5;
+    margin: 0 68px;
+}
+
+.regra {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 68px 45px;
+}
+
+.info {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2675c7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.regra h3 {
+    font-size: 27px;
+    color: #1b67ba;
+    margin-bottom: 12px;
+}
+
+.regra p {
+    font-size: 24px;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 15px;
+    }
+
+    .cabecalho {
+        padding: 28px;
+    }
+
+    .cabecalho h1 {
+        font-size: 32px;
+    }
+
+    .cabecalho p {
+        font-size: 18px;
+    }
+
+    .icone {
+        font-size: 50px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        padding: 30px 28px 25px;
+        gap: 25px;
+    }
+
+    #btnVerificar {
+        width: calc(100% - 56px);
+        margin: 0 28px;
+        font-size: 22px;
+    }
+
+    .resultado {
+        margin: 28px;
+        padding: 28px;
+    }
+
+    hr {
+        margin: 0 28px;
+    }
+
+    .regra {
+        padding: 25px 28px 35px;
+    }
+}
